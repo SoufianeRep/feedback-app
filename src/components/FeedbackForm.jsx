@@ -1,10 +1,11 @@
-import Card from './shared/Card';
-import React, { useState } from 'react';
+import Card from "./shared/Card";
+import React, { useState } from "react";
+import Button from "./shared/Button";
 
 export default function FeedbackForm() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
 
-  const handleTextChange = (e) => {
+  const handleTextChange = e => {
     setText(e.target.value);
   };
 
@@ -13,14 +14,14 @@ export default function FeedbackForm() {
       <form>
         <h2>How would you rate your service with us?</h2>
         {/* TODO: Rating select componenet */}
-        <div className='input-group'>
+        <div className="input-group">
           <input
             onChange={handleTextChange}
-            type='text'
-            placeholder='Write a review'
+            type="text"
+            placeholder="Write a review"
             value={text}
           />
-          <button type='submit'>Send</button>
+          <Button type="submit">Send</Button>
         </div>
       </form>
     </Card>
